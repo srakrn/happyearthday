@@ -2,9 +2,9 @@
 {% include "bootstrap.html" %}
 
 {% block content %}
-<div class="jumbotron jumbotron-fluid header">
+<div class="jumbotron jumbotron-fluid bg-purple">
     <div class="container">
-        <a class="btn btn-outline-dark" href="{% url 'index' %}">« กลับหน้าแรก</a>
+        <a class="btn btn-outline-dark mb-3" href="{% url 'index' %}">« กลับหน้าแรก</a>
         <h1>เขียนคำอวยพรให้เอิ๊ต</h1>
     </div>
 </div>
@@ -18,12 +18,12 @@
     <form method="POST">
         {% csrf_token %}
         {{ form|crispy }}
-        <div class="alert alert-warning small">
+        <div class="alert alert-light small">
             เมื่อคุณกดปุ่ม "อวยพรให้เอิ๊ต" ถือว่าคุณทราบดีว่าข้อความที่คุณเขียนจะแสดงผลเป็นสาธารณะ
             และทราบดีว่าผู้ดูแลเว็บไซต์
             กล่าวคือผู้ที่มีชื่อผู้ใช้และรหัสผ่านสำหรับเข้าใช้หน้าจัดการข้อความ
             มีสิทธิ์โดยสมบูรณ์ในการซ่อนหรือลบข้อความของคุณ
-            และผู้ดูแลเว็บไซต์มีสิทธิ์ส่งมอบบันทึกการเข้าใช้งานเว็บไซต์ (log) ซึ่งอาจประกอบด้วยหมายเลขไอพี
+            ผู้ดูแลเว็บไซต์มีสิทธิ์ส่งมอบบันทึกการเข้าใช้งานเว็บไซต์ (log) ซึ่งอาจประกอบด้วยหมายเลขไอพี
             ให้กับเจ้าหน้าที่รัฐ
             หากได้รับการร้องขอตามกระบวนการทางกฏหมาย
         </div>
