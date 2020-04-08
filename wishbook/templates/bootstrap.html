@@ -2,67 +2,83 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>It's Khamin's Day!</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Pattaya|Sarabun" rel="stylesheet">
-        <style type="text/css">
-            body{
-                margin-bottom: 30px;
-                font-family: "Sarabun", sans-serif;
-                background: url('{% static "wishbook/bokeh-bg.svg" %}');
-                background-size: cover;
-                background-attachment: fixed;
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Happy Earth Day!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pattaya|Sarabun" rel="stylesheet">
+    <style type="text/css">
+        body {
+            margin-bottom: 30px;
+            font-family: "Sarabun", sans-serif;
+            background: url('{% static "wishbook/bokeh-bg.svg" %}');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .header {
+            position: relative;
+            background: url('{% static "wishbook/earth-bg.jpg" %}');
+            background-size: cover;
+            color: #fff;
+            text-shadow: 0px 1px 4px #000;
+        }
+
+        .header a,
+        .header a:hover {
+            color: #fff;
+        }
+
+        .header h1 {
+            font-family: "Pattaya", sans-serif;
+            text-shadow: 0px 2px 7px #000;
+        }
+
+        .header .header-spacer {
+            height: 5vh;
+        }
+
+        .header .logos {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .header .logo-item {
+            display: inline;
+            margin: 0 20px 0 0;
+        }
+
+        .invalid-feedback {
+            display: block !important;
+        }
+
+        @media only screen and (min-width: 992px) {
+            #header-mainpage {
+                text-align: right;
             }
-            .header{
-                position: relative;
-                background: url('{% static "wishbook/khamin-smiling.jpg" %}');
-                background-size: cover;
-                color: #fff;
-                text-shadow: 0px 1px 4px #000;
+
+            .header .header-spacer {
+                height: 20vh;
             }
-            .header a, .header a:hover{
-                color: #fff;
+
+            .header .logo-item {
+                margin: 0 0 0 20px;
             }
-            .header h1{
-                font-family: "Pattaya", sans-serif;
-                text-shadow: 0px 2px 7px #000;
-            }
-            .header .header-spacer{
-                height: 5vh;
-            }
-            .header .logos{
-                margin: 0px;
-                padding: 0px;
-            }
-            .header .logo-item{
-                display: inline;
-                margin: 0 20px 0 0;
-            }
-            .invalid-feedback{
-                display: block !important;
-            }
-            @media only screen and (min-width: 992px) {
-                #header-mainpage{
-                    text-align: right;
-                }
-                .header .header-spacer{
-                    height: 20vh;
-                }
-                .header .logo-item{
-                    margin: 0 0 0 20px;
-                }
-            }
-        </style>
-        <meta property="og:image" content="{% static 'wishbook/khamin-og-nonsquare.png' %}" />
-        <meta property="og:title" content="It's Khamin's Day" />
-        <meta property="og:description" content="ร่วมติดแฮชแท็ก #Born2BeKhamin ส่งความรักเนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่" />
-    </head>
-    <body>
-        {% block content %}
-        {% endblock %}
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </body>
+        }
+    </style>
+    <meta property="og:image" content="{% static 'wishbook/khamin-og-nonsquare.png' %}" />
+    <meta property="og:title" content="It's Khamin's Day" />
+    <meta property="og:description"
+        content="ร่วมติดแฮชแท็ก #Born2BeKhamin ส่งความรักเนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่" />
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
 </html>

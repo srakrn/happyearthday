@@ -2,44 +2,43 @@
 {% load static %}
 
 {% block content %}
-    <div class="jumbotron jumbotron-fluid header" id="header-mainpage">
-        <div class="container">
-            <div class="col-lg-8 offset-lg-4">
-                <a href="{% url 'index' %}">
-                    <h1 class="display-2">It's Khamin's Day!</h1>
-                </a>
-                <p class="lead">
-                    ร่วมติดแฮชแท็ก <span style="font-weight: bold;">#Born2BeKhamin</span>
-                    ส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของขมิ้น BNK48 ได้ด้วยกันที่นี่
-                </p>
-                <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
-                <p>หรือเลื่อนลงข้างล่างเพื่ออ่านคำอวยพร</p>
-                <div class="header-spacer"></div>
-                ร่วมกันทำให้ขมิ้น (จากใจ) โดย
-                <ul class="logos">
-                    <li class="logo-item"><img src="{% static 'wishbook/srakrn-logo.svg' %}"></img></li>
-                    <li class="logo-item"><a href="https://khamingarden.com"><img src="{% static 'wishbook/khamin-garden-logo.png' %}"></img></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<div class="jumbotron jumbotron-fluid header" id="header-mainpage">
     <div class="container">
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }}">{{ message|safe }}</li></div>
-        {% endfor %}
-    {% endif %}
-        <div class="card-columns">
-            {% for wish in all_wishes %}
-                <div class="card p-3">
-                    <blockquote class="blockquote mb-0">
-                        <p>{{ wish.wish_text }}</p>
-                        <footer class="blockquote-footer" title="ID: {{ wish.id }}"> 
-                            {{ wish.wish_owner }}
-                        </footer>
-                    </blockquote>
-                </div>
-            {% endfor %}
+        <div class="col-lg-8 offset-lg-4">
+            <a href="{% url 'index' %}">
+                <h1 class="display-2">Happy Earth Day!</h1>
+            </a>
+            <p class="lead">
+                มาส่งความรัก ความห่วงใย และความปรารถนาดี เนื่องในวันเกิดของเอิ๊ต ภัทรวีได้ที่นี่
+            </p>
+            <a class="btn btn-primary btn-lg" href="{% url 'new_wish' %}"><img
+                    src="{% static 'wishbook/add.svg'%}"></img> ร่วมส่งคำอวยพร!</a>
+            <p>หรือเลื่อนลงข้างล่างเพื่ออ่านคำอวยพร</p>
+            <div class="header-spacer"></div>
+            <span style="font-style: italic;">
+                Website made with love by @srakrn
+            </span>
         </div>
     </div>
+</div>
+<div class="container">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">{{ message|safe }}</li>
+    </div>
+    {% endfor %}
+    {% endif %}
+    <div class="card-columns">
+        {% for wish in all_wishes %}
+        <div class="card p-3">
+            <blockquote class="blockquote mb-0">
+                <p>{{ wish.wish_text }}</p>
+                <footer class="blockquote-footer" title="ID: {{ wish.id }}">
+                    {{ wish.wish_owner }}
+                </footer>
+            </blockquote>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
