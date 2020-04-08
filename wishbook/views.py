@@ -24,7 +24,7 @@ def new_wish(request):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                """ส่งคำอวยพรให้ขมิ้นสำเร็จแล้ว! ทวิตอวยพรด้วยข้อความเมื่อกี้ได้ด้วยการกดปุ่มนี้ 
+                """ส่งคำอวยพรสำเร็จแล้ว! ทวิตอวยพรด้วยข้อความเมื่อกี้ได้ด้วยการกดปุ่มนี้ 
                     <a class="twitter-share-button"
                     href='https://twitter.com/intent/tweet?url=hbdcherprang.herokupp.com&text={}%20#HappyEarthDay'>Tweet</a></p>""".format(
                     wish.wish_text
